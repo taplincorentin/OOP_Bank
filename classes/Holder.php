@@ -55,8 +55,8 @@
 		    $this->_bDate = $bDate;
 	    }
 
-	    public function set_city($_city) {
-		    $this->_city = $_city;
+	    public function set_city($city) {
+		    $this->_city = $city;
 	    }	
 	
 	    public function set_accounts(array $accounts) {
@@ -68,8 +68,30 @@
     		return $this->get_name()." ".$this->get_fName()." ".$this->get_bDate()->format("d-m-Y")." ".$this->get_city();
 		}
 
+		//method to keep track of different accounts a holder can have
+		function addAccount(BankAccount $account){
+            $this->_accounts []= $account;
+        }
+		
+		 //method to get the holder's name
+		function age() {
+            $now = new DateTime('now');
+            return $this-> get_bDate() -> diff($now)->y;
+                
+        }
 
+		//method to get a holder's accounts info
+		function getAccountsInfos(){
+			$result = "";
+			$accounts = $this->get_accounts();
+			foreach($accounts as $value){
+				$result .= "Account Type : ".$value->get_accountType()." / Balance : ".$value->get_balance()." ".$value->get_currency().".<br>";
+			}
+			return $result;
+		}
 		
-		
+		function getHolderInfo(){
+			return $this->get_name()." ".$this->get_fName()."<br> City : ".$this->get_city()."<br>Date of Birth : ".$this->get_bDate()->format("d-m-Y")." (".$this->age()." years old) <br>".$this->getAccountsInfos()."<br>";
+		}
 }
 ?>

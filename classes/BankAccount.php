@@ -16,6 +16,7 @@
             $this->_balance = $balance;
             $this->_currency = $currency;
             $this->_holder = $holder;
+            $this->_holder->addAccount($this);
         }
 
 
@@ -71,6 +72,8 @@
             $beneficiary->_balance += $amount;
         }
 
-
+        public function getAccountInfo(){
+            return "Holder : ".$this->get_holder()->get_fName()." ".$this->get_holder()->get_name()."<br>Type : ". $this->get_accountType()."<br>Balance : ".$this->get_balance().$this->get_currency(); 
+        } 
 } 
 ?>
