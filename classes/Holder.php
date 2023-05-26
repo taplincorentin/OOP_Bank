@@ -84,8 +84,8 @@
 		function getAccountsInfos(){
 			$result = "";
 			$accounts = $this->get_accounts();
-			foreach($accounts as $value){
-				$result .= "Account Type : ".$value->get_accountType()." / Balance : ".$value->get_balance()." ".$value->get_currency().".<br>";
+			foreach($accounts as $account){
+				$result .= "Account Type : ".$account->get_accountType()." / Balance : ".$account->get_balance()." ".$account->get_currency().".<br>";
 			}
 			return $result;
 		}
