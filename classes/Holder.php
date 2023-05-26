@@ -91,7 +91,7 @@
 		}
 		
 		function getHolderInfo(){
-			return $this->get_name()." ".$this->get_fName()."<br> City : ".$this->get_city()."<br>Date of Birth : ".$this->get_bDate()->format("d-m-Y")." (".$this->age()." years old) <br>".$this->getAccountsInfos()."<br>";
+			return "Last name : ".$this->get_name()."/ First name : ".$this->get_fName()."<br> City : ".$this->get_city()."<br>Date of Birth : ".$this->get_bDate()->format("d-m-Y")." (".$this->age()." years old) <br>".$this->getAccountsInfos()."<br>";
 		}
 }
 ?>
