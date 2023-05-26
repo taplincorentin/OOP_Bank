@@ -68,8 +68,8 @@
         }
 
         public function transfer(float $amount,BankAccount $beneficiary){
-            $this->_balance -= $amount;
-            $beneficiary->_balance += $amount;
+            $this->debitAccount($amount);
+            $beneficiary->creditAccount($amount);
         }
 
         public function getAccountInfo(){
