@@ -66,6 +66,11 @@
             $this->_balance -= $amount;
         }
 
+        public function transfer(float $amount,BankAccount $beneficiary){
+            $this->_balance -= $amount;
+            $beneficiary->_balance += $amount;
+        }
+
 
 } 
 ?>
