@@ -65,7 +65,7 @@
 
 		//toString method
 		public function __toString(){
-    		return $this->get_name()." ".$this->get_fName()." ".$this->get_bDate()." ".$this->get_city();
+    		return $this->get_name()." ".$this->get_fName()." ".$this->get_bDate()->format("d-m-Y")." ".$this->get_city();
 		}
 }
 ?>

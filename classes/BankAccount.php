@@ -20,7 +20,7 @@
 
 
         //get methods
-	    public function get_accountType() {
+        public function get_accountType() {
 		    return $this->_accountType;
 	    }
 
