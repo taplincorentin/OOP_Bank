@@ -53,5 +53,10 @@
 	    public function set_holder(Holder $holder) {
 		    $this->_holder = $holder;
 	    }
+
+        //toString method
+		public function __toString(){
+    		return $this->get_accountType()." ".$this->get_balance()." ".$this->get_currency()." ".$this->get_holder();
+		}
 }
 ?>
