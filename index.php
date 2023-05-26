@@ -15,7 +15,6 @@
     echo $a1."<br>".$a2."<br>";
     echo $h1->age()."<br>";
     echo $h1->getAccountsInfos();*/
-    
     echo $h1->getHolderInfo();
     echo $a1->getAccountInfo();
 ?>
